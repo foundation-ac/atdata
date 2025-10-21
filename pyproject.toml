@@ -1,7 +1,7 @@
 [project]
 name = "ekumen"
 version = "0.1.1a1"
-description = "Add your description here"
+description = "A loose federation of distributed, typed datasets"
 readme = "README.md"
 authors = [
     { name = "Maxine Levesque", email = "hello@maxine.science" }
