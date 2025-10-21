@@ -14,7 +14,7 @@ from typing import (
     Any,
 )
 
-import ekumen.dataset as ekd
+import atdata.dataset as ekd
 
 
 ## Sample test cases
