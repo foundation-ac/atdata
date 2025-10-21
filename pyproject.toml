@@ -1,5 +1,5 @@
 [project]
-name = "ekumen"
+name = "atdata"
 version = "0.1.1a1"
 description = "A loose federation of distributed, typed datasets"
 readme = "README.md"
@@ -15,11 +15,14 @@ dependencies = [
 ]
 
 [project.scripts]
-ekumen = "ekumen:main"
+ekumen = "atdata:main"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+addopts = "--cov=atdata"
 
 [dependency-groups]
 dev = [
