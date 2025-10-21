@@ -19,7 +19,7 @@ permissions:
 jobs:
 
   uv-release-build:
-    name: python
+    # name: python
     runs-on: ubuntu-latest
 
     steps:
@@ -42,7 +42,8 @@ jobs:
         run: uv build
 
   uv-pypi-publish:
-    name: python
+    # name: python
+    runs-on: ubuntu-latest
     needs:
       - uv-release-build
     environment:
