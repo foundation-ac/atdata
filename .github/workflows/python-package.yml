@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  uv-example:
+  uv-test:
     name: python
     runs-on: ubuntu-latest
 
@@ -27,9 +27,8 @@ jobs:
 
       - name: Install the project
         run: uv sync --all-extras --dev
-        # TODO Better to use --locked?
+        # TODO Better to use --locked for author control over versions?
         # run: uv sync --locked --all-extras --dev
-        
 
       - name: Run tests
         # For example, using `pytest`
