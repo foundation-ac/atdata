@@ -172,7 +172,7 @@ def _batch_aggregate( xs: Sequence ):
 
     return list( xs )
 
-class SamlpeBatch( Generic[DT] ):
+class SampleBatch( Generic[DT] ):
 
     def __init__( self, samples: Sequence[DT] ):
         """TODO"""
@@ -233,7 +233,7 @@ class Dataset( Generic[ST] ):
     def batch_type( self ) -> Type:
         """The type of a batch built from `sample_class`"""
         # return self.__orig_class__.__args__[1]
-        return SamlpeBatch[self.sample_type]
+        return SampleBatch[self.sample_type]
 
 
     # _schema_registry_sample: dict[str, Type]
@@ -396,7 +396,7 @@ class Dataset( Generic[ST] ):
                 value = sample,
             )
 
-    def wrap_batch( self, batch: WDSRawBatch ) -> SamlpeBatch[ST]:
+    def wrap_batch( self, batch: WDSRawBatch ) -> SampleBatch[ST]:
         """Wrap a `batch` of samples into the appropriate dataset-specific type
        
         This default implementation simply creates a list one sample at a time
@@ -405,7 +405,7 @@ class Dataset( Generic[ST] ):
         assert 'msgpack' in batch
         batch_unpacked = [ self.sample_type.from_bytes( bs )
                            for bs in batch['msgpack'] ]
-        return SamlpeBatch[self.sample_type]( batch_unpacked )
+        return SampleBatch[self.sample_type]( batch_unpacked )
 
 
     # # @classmethod
