@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-ekumen = "atdata:main"
+atdata = "atdata:main"
 
 [build-system]
 requires = ["hatchling"]
