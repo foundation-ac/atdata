@@ -4,7 +4,6 @@
 # Imports
 
 from io import BytesIO
-import ormsgpack as omp
 
 import numpy as np
 
