@@ -1,5 +1,17 @@
 # atdata
 
+> **This repository has moved to [forecast-bio/atdata](https://github.com/forecast-bio/atdata).**
+>
+> This `foundation-ac/atdata` repo is archived and will no longer receive updates.
+> All new development, issues, and releases happen at the new location.
+>
+> ```bash
+> # Update your remote
+> git remote set-url origin https://github.com/forecast-bio/atdata.git
+> ```
+
+---
+
 [![codecov](https://codecov.io/gh/foundation-ac/atdata/branch/main/graph/badge.svg)](https://codecov.io/gh/foundation-ac/atdata)
 
 A loose federation of distributed, typed datasets built on WebDataset.
